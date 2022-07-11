@@ -8,7 +8,7 @@ table.header = False
 table.padding_width = 5
 table.align = 'l'
 
-Q: list[int] = [i for i in range(5)]
+Q: list[int] = list(range(5))
 TC: list[int] = [60, 100, 130, 155, 190]
 FC: int = TC[0]
 VC: list[int] = []

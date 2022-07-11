@@ -9,18 +9,18 @@ table.align = 'l'
 table.align["Единицы продукции (в неделю)"] = 'c'
 table.hrules = ALL
 
-Q: list[int] = [i for i in range(9)]
+Q: list[int] = list(range(9))
 FC: int = 1000
 VC: list[int] = [0, 350, 560, 740, 1000, 1400, 2000, 2800, 3960]
 TC: list[int] = []
-ATC: list[int] = [0] # ATC = TC/Q
+ATC: list[int] = [0]
 MC: list[int] = [0]
 
 for i in range(9):
     TC.append(FC + VC[i])
 
 for i in range(1, 9):
-    ATC.append(int((TC[i] - TC[i - 1]) / Q[i]))
+    ATC.append(int((TC[i]) / Q[i]))
 
 for i in range(1, 9):
     MC.append(int((TC[i] - TC[i - 1]) / (Q[i] - Q[i - 1])))
